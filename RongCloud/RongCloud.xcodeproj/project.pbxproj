@@ -16,6 +16,8 @@
 		A44A3943212A8BE40068497F /* ZLBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44A3942212A8BE40068497F /* ZLBaseNavigationController.m */; };
 		A44A3946212A8C570068497F /* ZLWaittingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44A3945212A8C570068497F /* ZLWaittingViewController.m */; };
 		A44A3949212A8DFC0068497F /* ZLConversationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44A3948212A8DFC0068497F /* ZLConversationListViewController.m */; };
+		A44A394C212AABD70068497F /* ZLConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44A394B212AABD70068497F /* ZLConversationViewController.m */; };
+		A44A394F212AB5490068497F /* ZLUserDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A44A394E212AB5490068497F /* ZLUserDataSource.m */; };
 		E7C7BCD1EAF153A19241E06F /* libPods-RongCloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 903E1AED2096BB4021C0237C /* libPods-RongCloud.a */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,10 @@
 		A44A3945212A8C570068497F /* ZLWaittingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLWaittingViewController.m; sourceTree = "<group>"; };
 		A44A3947212A8DFC0068497F /* ZLConversationListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLConversationListViewController.h; sourceTree = "<group>"; };
 		A44A3948212A8DFC0068497F /* ZLConversationListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLConversationListViewController.m; sourceTree = "<group>"; };
+		A44A394A212AABD70068497F /* ZLConversationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLConversationViewController.h; sourceTree = "<group>"; };
+		A44A394B212AABD70068497F /* ZLConversationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLConversationViewController.m; sourceTree = "<group>"; };
+		A44A394D212AB5490068497F /* ZLUserDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLUserDataSource.h; sourceTree = "<group>"; };
+		A44A394E212AB5490068497F /* ZLUserDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLUserDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,8 @@
 		A44A3939212A8BB20068497F /* UserDataSource */ = {
 			isa = PBXGroup;
 			children = (
+				A44A394D212AB5490068497F /* ZLUserDataSource.h */,
+				A44A394E212AB5490068497F /* ZLUserDataSource.m */,
 			);
 			path = UserDataSource;
 			sourceTree = "<group>";
@@ -137,6 +145,8 @@
 				A44A3945212A8C570068497F /* ZLWaittingViewController.m */,
 				A44A3947212A8DFC0068497F /* ZLConversationListViewController.h */,
 				A44A3948212A8DFC0068497F /* ZLConversationListViewController.m */,
+				A44A394A212AABD70068497F /* ZLConversationViewController.h */,
+				A44A394B212AABD70068497F /* ZLConversationViewController.m */,
 			);
 			path = ViewCintrollers;
 			sourceTree = "<group>";
@@ -275,7 +285,9 @@
 				A44A3943212A8BE40068497F /* ZLBaseNavigationController.m in Sources */,
 				A44A3940212A8BB20068497F /* ZLLoginController.m in Sources */,
 				A44A3930212A53330068497F /* main.m in Sources */,
+				A44A394C212AABD70068497F /* ZLConversationViewController.m in Sources */,
 				A44A3946212A8C570068497F /* ZLWaittingViewController.m in Sources */,
+				A44A394F212AB5490068497F /* ZLUserDataSource.m in Sources */,
 				A44A3922212A53310068497F /* AppDelegate.m in Sources */,
 				A44A3949212A8DFC0068497F /* ZLConversationListViewController.m in Sources */,
 			);

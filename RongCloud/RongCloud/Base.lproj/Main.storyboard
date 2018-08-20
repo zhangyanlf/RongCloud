@@ -61,7 +61,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXW-fy-jNF">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="SUF-BP-piK"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="SUF-BP-piK"/>
                                             <constraint firstAttribute="height" constant="50" id="qaI-5M-Y4A"/>
                                         </constraints>
                                         <state key="normal" title="zhangyanlf">
@@ -81,7 +81,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pll-Ap-8qg">
                                         <rect key="frame" x="160" y="0.0" width="150" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="9Ud-3s-dee"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="9Ud-3s-dee"/>
                                             <constraint firstAttribute="height" constant="50" id="cxZ-df-g4O"/>
                                         </constraints>
                                         <state key="normal" title="Lucky boy">

@@ -8,6 +8,7 @@
 
 #import "ZLConversationListViewController.h"
 #import <RongIMKit/RongIMKit.h>
+#import "ZLConversationViewController.h"
 
 @interface ZLConversationListViewController ()
 
@@ -39,6 +40,15 @@
 }
 
 - (IBAction)addBtnItem:(UIBarButtonItem *)sender {
+    NSString *targetId = @"luckyboy";
+    if ([[[RCIMClient sharedRCIMClient] currentUserInfo].userId isEqualToString:targetId]) {
+        targetId = @"zhangyanlf";
+    }
+    
+    ZLConversationViewController *vc = [[ZLConversationViewController alloc] initWithConversationType:ConversationType_PRIVATE targetId:targetId];
+    vc.title = targetId;
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 

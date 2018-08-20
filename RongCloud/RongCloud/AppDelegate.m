@@ -8,8 +8,11 @@
 
 #import "AppDelegate.h"
 #import <RongIMKit/RongIMKit.h>
+#import "ZLUserDataSource.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic,strong) ZLUserDataSource *userDataSource;
 
 @end
 
@@ -19,6 +22,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [[RCIM sharedRCIM] initWithAppKey:@"y745wfm8yjpov"];
+    
+    _userDataSource = [[ZLUserDataSource alloc] init];
+    [[RCIM sharedRCIM] setUserInfoDataSource:_userDataSource];
     return YES;
 }
 
