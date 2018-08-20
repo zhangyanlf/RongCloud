@@ -1,0 +1,28 @@
+PODS:
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
+  - Masonry (1.1.0)
+  - RongCloudIM/IMKit (2.9.3):
+    - RongCloudIM/IMLib
+  - RongCloudIM/IMLib (2.9.3)
+
+DEPENDENCIES:
+  - ChameleonFramework
+  - Masonry
+  - RongCloudIM/IMKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ChameleonFramework
+    - Masonry
+    - RongCloudIM
+
+SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  RongCloudIM: 3990730b9f65da3fd32c71be699c1a29c219c6b5
+
+PODFILE CHECKSUM: e680014a105119a031912c7a5c50a2f48c529557
+
+COCOAPODS: 1.5.3

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3ML-7H-lAT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Waitting View Controller-->
+        <scene sceneID="83T-Pk-xpJ">
+            <objects>
+                <viewController storyboardIdentifier="WaittingVC" id="4nw-H8-tkh" customClass="ZLWaittingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VeD-sF-LCe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waitting..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7o-E6-z04">
+                                <rect key="frame" x="134" y="321.5" width="108" height="25.5"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Q7o-E6-z04" firstAttribute="centerY" secondItem="VeD-sF-LCe" secondAttribute="centerY" id="Kxg-OK-Xd1"/>
+                            <constraint firstItem="Q7o-E6-z04" firstAttribute="centerX" secondItem="VeD-sF-LCe" secondAttribute="centerX" id="viT-6x-aPe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="toQ-Xi-5vd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="63j-QR-Jk5"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="ShowLoginVC" id="aKt-TB-IRd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1cY-fy-TQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="438" y="-374"/>
+        </scene>
+        <!--Login Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ZLLoginController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demo默认账号，请选择登陆聊天" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8v-pE-Dum">
+                                <rect key="frame" x="10" y="70" width="355" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fBN-bw-To7">
+                                <rect key="frame" x="32.5" y="110.5" width="310" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXW-fy-jNF">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="SUF-BP-piK"/>
+                                            <constraint firstAttribute="height" constant="50" id="qaI-5M-Y4A"/>
+                                        </constraints>
+                                        <state key="normal" title="zhangyanlf">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="4"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="zhangyanlf:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8E8-kK-dMc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pll-Ap-8qg">
+                                        <rect key="frame" x="160" y="0.0" width="150" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="9Ud-3s-dee"/>
+                                            <constraint firstAttribute="height" constant="50" id="cxZ-df-g4O"/>
+                                        </constraints>
+                                        <state key="normal" title="Lucky boy">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="4"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="luck:" destination="BYZ-38-t0r" eventType="touchUpInside" id="obg-Lu-GKe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="r8v-pE-Dum" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="5Rj-5g-buU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r8v-pE-Dum" secondAttribute="trailing" constant="10" id="5nu-ap-jDO"/>
+                            <constraint firstItem="r8v-pE-Dum" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="AfO-5Y-xZ6"/>
+                            <constraint firstItem="fBN-bw-To7" firstAttribute="top" secondItem="r8v-pE-Dum" secondAttribute="bottom" constant="20" id="CfO-9r-ouF"/>
+                            <constraint firstItem="fBN-bw-To7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZRS-BN-MCf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="luck" destination="Pll-Ap-8qg" id="WtY-J8-MxJ"/>
+                        <outlet property="zhangyanlf" destination="cXW-fy-jNF" id="iYy-1p-mc2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1282" y="-375"/>
+        </scene>
+        <!--Conversation-->
+        <scene sceneID="JVp-en-3cE">
+            <objects>
+                <viewController storyboardIdentifier="ConversationVC" id="jiZ-JM-aas" customClass="ZLConversationListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2th-df-Cvm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ADI-uL-WX7"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Conversation" id="tLD-Dy-cNV">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="qWJ-AD-zgV">
+                            <connections>
+                                <action selector="logout:" destination="jiZ-JM-aas" id="9TR-Jr-9Ou"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="FE0-GQ-Wrw">
+                            <connections>
+                                <action selector="addBtnItem:" destination="jiZ-JM-aas" id="e2M-S3-NuM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xeE-3g-008" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2049" y="-384"/>
+        </scene>
+        <!--Base Navigation Controller-->
+        <scene sceneID="2x6-DP-4Eq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3ML-7H-lAT" customClass="ZLBaseNavigationController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3yO-yK-bzS">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4nw-H8-tkh" kind="relationship" relationship="rootViewController" id="UeR-Jc-f5Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="66p-Eq-vrR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-303.19999999999999" y="-361.16941529235385"/>
+        </scene>
+    </scenes>
+</document>
