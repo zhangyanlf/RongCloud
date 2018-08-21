@@ -20,11 +20,21 @@
     [super viewDidLoad];
    
     self.conversationListTableView.tableFooterView = [UIView new];
+    self.showConnectingStatusOnNavigatorBar = YES;
+    self.isShowNetworkIndicatorView = NO;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (void) onSelectedTableRow:(RCConversationModelType)conversationModelType conversationModel:(RCConversationModel *)model atIndexPath:(NSIndexPath *)indexPath
+{
+    ZLConversationViewController *vc = [[ZLConversationViewController alloc] initWithConversationType:model.conversationType targetId:model.targetId];
+    vc.title = model.targetId;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 //退出按钮
@@ -40,7 +50,7 @@
 }
 
 - (IBAction)addBtnItem:(UIBarButtonItem *)sender {
-    NSString *targetId = @"luckyboy";
+    NSString *targetId = @"luck";
     if ([[[RCIMClient sharedRCIMClient] currentUserInfo].userId isEqualToString:targetId]) {
         targetId = @"zhangyanlf";
     }

@@ -20,6 +20,8 @@
 		A44A394F212AB5490068497F /* ZLUserDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A44A394E212AB5490068497F /* ZLUserDataSource.m */; };
 		A4C01429212BB38800A7997B /* ZLLuckMoneyMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C01428212BB38800A7997B /* ZLLuckMoneyMessage.m */; };
 		A4C0142C212BB9A100A7997B /* ZLLuckMoneyMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C0142B212BB9A100A7997B /* ZLLuckMoneyMessageCell.m */; };
+		A4C0142F212BEBCA00A7997B /* ZLRecallMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C0142E212BEBCA00A7997B /* ZLRecallMessage.m */; };
+		A4C01432212BF1F400A7997B /* ZLRecallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C01431212BF1F400A7997B /* ZLRecallCell.m */; };
 		E7C7BCD1EAF153A19241E06F /* libPods-RongCloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 903E1AED2096BB4021C0237C /* libPods-RongCloud.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,10 @@
 		A4C01428212BB38800A7997B /* ZLLuckMoneyMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLLuckMoneyMessage.m; sourceTree = "<group>"; };
 		A4C0142A212BB9A100A7997B /* ZLLuckMoneyMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLLuckMoneyMessageCell.h; sourceTree = "<group>"; };
 		A4C0142B212BB9A100A7997B /* ZLLuckMoneyMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLLuckMoneyMessageCell.m; sourceTree = "<group>"; };
+		A4C0142D212BEBCA00A7997B /* ZLRecallMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLRecallMessage.h; sourceTree = "<group>"; };
+		A4C0142E212BEBCA00A7997B /* ZLRecallMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLRecallMessage.m; sourceTree = "<group>"; };
+		A4C01430212BF1F400A7997B /* ZLRecallCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLRecallCell.h; sourceTree = "<group>"; };
+		A4C01431212BF1F400A7997B /* ZLRecallCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLRecallCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +146,10 @@
 		A44A393C212A8BB20068497F /* Recall */ = {
 			isa = PBXGroup;
 			children = (
+				A4C0142D212BEBCA00A7997B /* ZLRecallMessage.h */,
+				A4C0142E212BEBCA00A7997B /* ZLRecallMessage.m */,
+				A4C01430212BF1F400A7997B /* ZLRecallCell.h */,
+				A4C01431212BF1F400A7997B /* ZLRecallCell.m */,
 			);
 			path = Recall;
 			sourceTree = "<group>";
@@ -298,10 +308,12 @@
 				A44A3930212A53330068497F /* main.m in Sources */,
 				A44A394C212AABD70068497F /* ZLConversationViewController.m in Sources */,
 				A44A3946212A8C570068497F /* ZLWaittingViewController.m in Sources */,
+				A4C01432212BF1F400A7997B /* ZLRecallCell.m in Sources */,
 				A44A394F212AB5490068497F /* ZLUserDataSource.m in Sources */,
 				A44A3922212A53310068497F /* AppDelegate.m in Sources */,
 				A4C01429212BB38800A7997B /* ZLLuckMoneyMessage.m in Sources */,
 				A44A3949212A8DFC0068497F /* ZLConversationListViewController.m in Sources */,
+				A4C0142F212BEBCA00A7997B /* ZLRecallMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

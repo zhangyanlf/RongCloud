@@ -36,7 +36,7 @@
 
 - (RCUserInfo *)luckyboy {
     if (!_luckyboy) {
-        _luckyboy = [[RCUserInfo alloc] initWithUserId:@"luckyboy" name:@"幸运男孩" portrait:@"http://touxiang.qqzhi.com/uploads/2012-11/1111014928675.jpg"];
+        _luckyboy = [[RCUserInfo alloc] initWithUserId:@"luck" name:@"幸运男孩" portrait:@"http://touxiang.qqzhi.com/uploads/2012-11/1111014928675.jpg"];
     }
     return _luckyboy;
 }
