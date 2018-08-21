@@ -7,6 +7,8 @@
 //
 
 #import "ZLConversationViewController.h"
+#import "ZLLuckMoneyMessage.h"
+#import "ZLLuckMoneyMessageCell.h"
 
 @interface ZLConversationViewController ()
 
@@ -16,7 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.chatSessionInputBarControl.pluginBoardView insertItemWithImage:[UIImage imageNamed:@"luck-money"] title:@"红包" tag:200];
+    [self registerClass:[ZLLuckMoneyMessageCell class] forMessageClass:[ZLLuckMoneyMessage class]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +27,47 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) pluginBoardView:(RCPluginBoardView *)pluginBoardView clickedItemWithTag:(NSInteger)tag
+{
+    if (tag == 200) {
+        //TODO: 这里点击红包弹出红包界面  以及处理红包功能
+        
+        [[RCIM sharedRCIM] sendMessage:self.conversationType targetId:self.targetId content:[[ZLLuckMoneyMessage alloc] initWith:200 description:@"恭喜发财"] pushContent:@"您有一条新消息" pushData:@"{\"zhangyanlf\" : 666666}" success:^(long messageId) {
+            
+        } error:^(RCErrorCode nErrorCode, long messageId) {
+            
+        }];
+    } else {
+        [super pluginBoardView:pluginBoardView clickedItemWithTag:tag];
+    }
+    
 }
-*/
+
+- (RCMessageBaseCell *)rcConversationCollectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    RCMessageModel *m = self.conversationDataRepository[indexPath.item];
+    
+    if ([m.objectName isEqualToString:[ZLLuckMoneyMessage getObjectName]]) {
+        ZLLuckMoneyMessageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[ZLLuckMoneyMessageCell identifier] forIndexPath:indexPath];
+        [cell setDataModel:m];
+        cell.conversationViewController = self;
+        return cell;
+    } else {
+        return [self rcUnkownConversationCollectionView:collectionView cellForItemAtIndexPath:indexPath];
+    }
+    
+}
+
+- (CGSize) rcConversationCollectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    RCMessageModel *m = self.conversationDataRepository[indexPath.item];
+    
+    if ([m.objectName isEqualToString:[ZLLuckMoneyMessage getObjectName]]) {
+        CGFloat h = 130 + (m.isDisplayNickname ? 20 : 0) + (m.isDisplayMessageTime ? 20 : 0);
+        return CGSizeMake(collectionView.frame.size.width, h);
+    } else {
+        return [self rcUnkownConversationCollectionView:collectionView layout:collectionViewLayout sizeForItemAtIndexPath:indexPath];
+    }
+}
 
 @end

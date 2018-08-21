@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <RongIMKit/RongIMKit.h>
 #import "ZLUserDataSource.h"
+#import "ZLLuckMoneyMessage.h"
 
 @interface AppDelegate ()
 
@@ -25,6 +26,7 @@
     
     _userDataSource = [[ZLUserDataSource alloc] init];
     [[RCIM sharedRCIM] setUserInfoDataSource:_userDataSource];
+    [[RCIM sharedRCIM] registerMessageType:[ZLLuckMoneyMessage class]];
     return YES;
 }
 
